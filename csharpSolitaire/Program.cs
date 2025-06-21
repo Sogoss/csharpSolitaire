@@ -3,4 +3,5 @@
 
 Deck deck = new Deck();
 
+deck.SeedShuffle(0);
 deck.Print();

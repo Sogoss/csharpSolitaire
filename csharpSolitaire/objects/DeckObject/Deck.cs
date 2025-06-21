@@ -1,11 +1,12 @@
 ﻿using csharpSolitaire.objects.CardObject;
 using csharpSolitaire.objects.CardSuitObject;
+using System.Collections.Generic;
 
 namespace csharpSolitaire.objects.DeckObject;
 
 internal class Deck : IDeck
 {
-    HashSet<Card> CardSet = [];
+    List<Card> CardSet = [];
 
 
     internal Deck()
@@ -30,5 +31,34 @@ internal class Deck : IDeck
         {
             card.Print();
         }
+    }
+
+
+    public void SeedShuffle(uint seed) {
+        if (seed == 0)
+        {
+            seed = (uint)DateTime.Now.Ticks;
+        }
+
+        List<Card> cardList = CardSet.OrderBy(Card => Card.Suit)
+                     .ThenBy(Card => Card.Rank)
+                     .ToList();
+
+        List <Card> shuffledDeck =[];
+
+        while (cardList.Count > 0)
+        {
+            Card card = cardList[(int)(seed % cardList.Count)];
+            cardList.Remove(card);
+
+            shuffledDeck.Add(card);
+
+            seed ^= seed >> 13;
+            seed ^= seed >>> 17;
+            seed ^= seed << 5;
+
+        }
+
+        CardSet = shuffledDeck;
     }
 }
