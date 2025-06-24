@@ -1,6 +1,6 @@
-﻿using csharpSolitaire.objects.CardObject;
+﻿using CsharpSolitaire.Objects.CardObject;
 
-namespace csharpSolitaire.objects.SeedStackObject;
+namespace CsharpSolitaire.Objects.SeedStackObject;
 internal interface ISeedStack {
     Card Pop();
     void Push(Card card);

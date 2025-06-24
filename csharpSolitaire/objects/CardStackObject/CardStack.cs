@@ -1,7 +1,7 @@
-﻿using csharpSolitaire.objects.CardObject;
-using csharpSolitaire.objects.Exceptions;
+﻿using CsharpSolitaire.Objects.CardObject;
+using CsharpSolitaire.Exceptions;
 
-namespace csharpSolitaire.objects.CardStackObject;
+namespace CsharpSolitaire.Objects.CardStackObject;
 
 internal class CardStack() : ICardStack {
     public Stack<Card> cardsStack = new();

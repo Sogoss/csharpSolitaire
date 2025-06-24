@@ -1,9 +1,8 @@
-﻿using csharpSolitaire.objects.CardSuitObject;
-
-namespace csharpSolitaire.objects.CardObject;
+﻿
+namespace CsharpSolitaire.Objects.CardObject;
 
 internal class Card : ICard {
-    public CardSuit Suit { get; set; }
+    public Suit Suit { get; set; }
     public int Rank { get; set; }
     public bool IsFaceUp { get; set; }
 
@@ -15,10 +14,10 @@ internal class Card : ICard {
             Console.ForegroundColor = ConsoleColor.Gray;
         else
             Console.ForegroundColor = Suit switch {
-                CardSuit.Hearts => ConsoleColor.Red,
-                CardSuit.Diamonds => ConsoleColor.DarkYellow,
-                CardSuit.Clubs => ConsoleColor.DarkMagenta,
-                CardSuit.Spades => ConsoleColor.Blue,
+                Suit.Hearts => ConsoleColor.Red,
+                Suit.Diamonds => ConsoleColor.DarkYellow,
+                Suit.Clubs => ConsoleColor.DarkMagenta,
+                Suit.Spades => ConsoleColor.Blue,
                 _ => Console.ForegroundColor,
             };
 
@@ -32,11 +31,11 @@ internal class Card : ICard {
     }
 
     public string GetsuitSymbol() {
-        return Suit switch {
-            CardSuit.Hearts => "♥",
-            CardSuit.Diamonds => "♦",
-            CardSuit.Clubs => "♣",
-            CardSuit.Spades => "♠",
+        return this.Suit switch {
+            Suit.Hearts => "♥",
+            Suit.Diamonds => "♦",
+            Suit.Clubs => "♣",
+            Suit.Spades => "♠",
             _ => "?"
         };
     }

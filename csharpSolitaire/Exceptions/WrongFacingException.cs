@@ -1,4 +1,4 @@
-﻿namespace csharpSolitaire.objects.Exceptions;
+﻿namespace CsharpSolitaire.Exceptions;
 internal class WrongFacingException : Exception {
     public WrongFacingException() : base() { }
 

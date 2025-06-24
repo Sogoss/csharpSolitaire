@@ -1,11 +1,10 @@
-﻿using csharpSolitaire.objects.CardObject;
-using csharpSolitaire.objects.CardSuitObject;
-using csharpSolitaire.objects.Exceptions;
+﻿using CsharpSolitaire.Objects.CardObject;
+using CsharpSolitaire.Exceptions;
 
-namespace csharpSolitaire.objects.SeedStackObject;
-internal class SeedStack(CardSuit suit) : ISeedStack {
+namespace CsharpSolitaire.Objects.SeedStackObject;
+internal class SeedStack(Suit suit) : ISeedStack {
     internal Stack<Card> stack = new();
-    internal CardSuit suit = suit;
+    internal Suit suit = suit;
 
     public Card Pop() {
         if (stack.Count == 0) throw new EmptyStackException();

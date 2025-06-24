@@ -1,4 +1,4 @@
-﻿namespace csharpSolitaire.objects.Exceptions;
+﻿namespace CsharpSolitaire.Exceptions;
 internal class WrongRankException : Exception {
     public WrongRankException() : base() { }
 

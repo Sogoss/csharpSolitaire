@@ -1,38 +1,37 @@
-﻿using csharpSolitaire.objects.CardObject;
-using csharpSolitaire.objects.CardSuitObject;
-using csharpSolitaire.objects.SeedStackObject;
+﻿using CsharpSolitaire.Objects.CardObject;
+using CsharpSolitaire.Objects.SeedStackObject;
 
 
-SeedStack heartStack = new SeedStack(CardSuit.Hearts);
-SeedStack diamondStack = new SeedStack(CardSuit.Diamonds);
+SeedStack heartStack = new SeedStack(Suit.Hearts);
+SeedStack diamondStack = new SeedStack(Suit.Diamonds);
 
 heartStack.Push(new Card() {
-    Suit = CardSuit.Hearts,
+    Suit = Suit.Hearts,
     Rank = 1,
     IsFaceUp = true
 });
 
 heartStack.Push(new Card() {
-    Suit = CardSuit.Hearts,
+    Suit = Suit.Hearts,
     Rank = 2,
     IsFaceUp = true
 });
 
 heartStack.Push(new Card() {
-    Suit = CardSuit.Hearts,
+    Suit = Suit.Hearts,
     Rank = 3,
     IsFaceUp = true
 });
 
 heartStack.Push(new Card() {
-    Suit = CardSuit.Hearts,
+    Suit = Suit.Hearts,
     Rank = 4,
     IsFaceUp = true
 });
 
 heartStack.Push(new Card() {
-    Suit = CardSuit.Hearts,
-    Rank = 14,
+    Suit = Suit.Hearts,
+    Rank = 5,
     IsFaceUp = true
 });
 

@@ -1,7 +1,7 @@
-﻿using csharpSolitaire.objects.CardObject;
-using csharpSolitaire.objects.CardSuitObject;
+﻿using CsharpSolitaire.Objects.CardObject;
+using CsharpSolitaire.Objects.CardSuitObject;
 
-namespace csharpSolitaire.objects.DeckObject;
+namespace CsharpSolitaire.Objects.DeckObject;
 
 internal class Deck : IDeck {
     List<Card> CardSet = [];

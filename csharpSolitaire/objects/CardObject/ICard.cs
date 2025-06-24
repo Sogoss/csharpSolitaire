@@ -1,4 +1,4 @@
-﻿namespace csharpSolitaire.objects.CardObject;
+﻿namespace CsharpSolitaire.Objects.CardObject;
 
 internal interface ICard {
     public void Print();
