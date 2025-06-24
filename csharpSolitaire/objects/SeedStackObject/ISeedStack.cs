@@ -1,7 +1,7 @@
 ﻿using csharpSolitaire.objects.CardObject;
 
-namespace csharpSolitaire.objects.CardStackObject;
-internal interface ICardStack {
+namespace csharpSolitaire.objects.SeedStackObject;
+internal interface ISeedStack {
     Card Pop();
     void Push(Card card);
     void Print();

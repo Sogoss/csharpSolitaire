@@ -1,4 +1,5 @@
 ﻿using csharpSolitaire.objects.CardObject;
+using csharpSolitaire.objects.Exceptions;
 
 namespace csharpSolitaire.objects.CardStackObject;
 
@@ -10,10 +11,9 @@ internal class CardStack() : ICardStack {
             card.Print();
     }
 
-    public void Pop(Card card) {
-        if (card == null) return;
-        else if (cardsStack.Contains(card)) return;
-        else cardsStack.Pop();
+    public Card Pop() {
+        if (cardsStack.Count == 0) throw new EmptyStackException();
+        return cardsStack.Pop();
     }
 
     public void Push(Card card) {
