@@ -1,7 +1,6 @@
 ﻿namespace csharpSolitaire.objects.CardSuitObject;
 
-public enum CardSuit
-{
+public enum CardSuit {
     Hearts,
     Diamonds,
     Clubs,

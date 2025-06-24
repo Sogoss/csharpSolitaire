@@ -1,22 +1,15 @@
 ﻿using csharpSolitaire.objects.CardObject;
 using csharpSolitaire.objects.CardSuitObject;
-using System.Collections.Generic;
 
 namespace csharpSolitaire.objects.DeckObject;
 
-internal class Deck : IDeck
-{
+internal class Deck : IDeck {
     List<Card> CardSet = [];
 
-
-    internal Deck()
-    {
-        foreach (CardSuit suit in Enum.GetValues(typeof(CardSuit)))
-        {
-            foreach (int rank in Enumerable.Range(1, 13))
-            {
-                CardSet.Add(new Card
-                {
+    internal Deck() {
+        foreach (CardSuit suit in Enum.GetValues(typeof(CardSuit))) {
+            foreach (int rank in Enumerable.Range(1, 13)) {
+                CardSet.Add(new Card {
                     Suit = suit,
                     Rank = rank,
                     IsFaceUp = false
@@ -25,18 +18,15 @@ internal class Deck : IDeck
         }
     }
 
-    public void Print()
-    {
-        foreach (var card in CardSet)
-        {
+
+    public void Print() {
+        foreach (var card in CardSet) {
             card.Print();
         }
     }
 
-
     public void SeedShuffle(uint seed) {
-        if (seed == 0)
-        {
+        if (seed == 0) {
             seed = (uint)DateTime.Now.Ticks;
         }
 
@@ -44,10 +34,9 @@ internal class Deck : IDeck
                      .ThenBy(Card => Card.Rank)
                      .ToList();
 
-        List <Card> shuffledDeck =[];
+        List<Card> shuffledDeck = [];
 
-        while (cardList.Count > 0)
-        {
+        while (cardList.Count > 0) {
             Card card = cardList[(int)(seed % cardList.Count)];
             cardList.Remove(card);
 

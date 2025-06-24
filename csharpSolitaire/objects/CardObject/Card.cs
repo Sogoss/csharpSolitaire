@@ -2,22 +2,19 @@
 
 namespace csharpSolitaire.objects.CardObject;
 
-internal class Card : ICard
-{
+internal class Card : ICard {
     public CardSuit Suit { get; set; }
     public int Rank { get; set; }
     public bool IsFaceUp { get; set; }
 
 
-    public void Print()
-    {
+    public void Print() {
         Console.OutputEncoding = System.Text.Encoding.UTF8;
 
         if (!IsFaceUp)
             Console.ForegroundColor = ConsoleColor.Gray;
         else
-            Console.ForegroundColor = Suit switch
-            {
+            Console.ForegroundColor = Suit switch {
                 CardSuit.Hearts => ConsoleColor.Red,
                 CardSuit.Diamonds => ConsoleColor.DarkYellow,
                 CardSuit.Clubs => ConsoleColor.DarkMagenta,
@@ -34,10 +31,8 @@ internal class Card : ICard
 
     }
 
-    public string GetsuitSymbol()
-    {
-        return Suit switch
-        {
+    public string GetsuitSymbol() {
+        return Suit switch {
             CardSuit.Hearts => "♥",
             CardSuit.Diamonds => "♦",
             CardSuit.Clubs => "♣",

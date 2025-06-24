@@ -1,7 +1,11 @@
-﻿using csharpSolitaire.objects.DeckObject;
+﻿using csharpSolitaire.objects.CardStackObject;
+using csharpSolitaire.objects.DeckObject;
 
 
 Deck deck = new Deck();
 
-deck.SeedShuffle(0);
+deck.SeedShuffle(5);
 deck.Print();
+
+
+CardStack cardStack = new CardStack();
