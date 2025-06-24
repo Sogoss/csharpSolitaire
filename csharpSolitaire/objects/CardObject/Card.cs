@@ -1,11 +1,9 @@
-﻿
-namespace CsharpSolitaire.Objects.CardObject;
+﻿namespace CsharpSolitaire.Objects.CardObject;
 
-internal class Card : ICard {
-    public Suit Suit { get; set; }
-    public int Rank { get; set; }
-    public bool IsFaceUp { get; set; }
-
+public class Card : ICard {
+    internal Suit Suit { get; set; }
+    internal Rank Rank { get; set; }
+    internal bool IsFaceUp { get; set; }
 
     public void Print() {
         Console.OutputEncoding = System.Text.Encoding.UTF8;
@@ -21,7 +19,7 @@ internal class Card : ICard {
                 _ => Console.ForegroundColor,
             };
 
-        Console.WriteLine($"{GetsuitSymbol()} {Rank}");
+        Console.WriteLine($"{GetsuitSymbol()} {((int)this.Rank)}");
         Console.ResetColor();
 
 

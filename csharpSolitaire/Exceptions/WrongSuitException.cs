@@ -1,10 +1,10 @@
 ﻿namespace CsharpSolitaire.Exceptions;
 
 internal class WrongSuitException : Exception {
-    public WrongSuitException() : base() { }
+    internal WrongSuitException() : base() { }
 
-    public WrongSuitException(string? message) : base(message) { }
+    internal WrongSuitException(string? message) : base(message) { }
 
-    public WrongSuitException(string? message, Exception? innerException) : base(message, innerException) { }
+    internal WrongSuitException(string? message, Exception? innerException) : base(message, innerException) { }
 
 }

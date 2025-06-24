@@ -1,9 +1,10 @@
 ﻿namespace CsharpSolitaire.Exceptions;
+
 internal class WrongRankException : Exception {
-    public WrongRankException() : base() { }
+    internal WrongRankException() : base() { }
 
-    public WrongRankException(string? message) : base(message) { }
+    internal WrongRankException(string? message) : base(message) { }
 
-    public WrongRankException(string? message, Exception? innerException) : base(message, innerException) { }
+    internal WrongRankException(string? message, Exception? innerException) : base(message, innerException) { }
 
 }

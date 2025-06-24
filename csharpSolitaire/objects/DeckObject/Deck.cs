@@ -1,26 +1,24 @@
 ﻿using CsharpSolitaire.Objects.CardObject;
-using CsharpSolitaire.Objects.CardSuitObject;
 
 namespace CsharpSolitaire.Objects.DeckObject;
 
-internal class Deck : IDeck {
-    List<Card> CardSet = [];
+public class Deck : IDeck {
+    internal List<Card> CardList = [];
 
-    internal Deck() {
-        foreach (CardSuit suit in Enum.GetValues(typeof(CardSuit))) {
+    public Deck() {
+        foreach (Suit suit in Enum.GetValues(typeof(Suit))) {
             foreach (int rank in Enumerable.Range(1, 13)) {
-                CardSet.Add(new Card {
+                CardList.Add(new Card {
                     Suit = suit,
-                    Rank = rank,
+                    Rank = (Rank)rank,
                     IsFaceUp = false
                 });
             }
         }
     }
 
-
     public void Print() {
-        foreach (var card in CardSet) {
+        foreach (var card in CardList) {
             card.Print();
         }
     }
@@ -30,7 +28,7 @@ internal class Deck : IDeck {
             seed = (uint)DateTime.Now.Ticks;
         }
 
-        List<Card> cardList = CardSet.OrderBy(Card => Card.Suit)
+        List<Card> cardList = CardList.OrderBy(Card => Card.Suit)
                      .ThenBy(Card => Card.Rank)
                      .ToList();
 
@@ -48,6 +46,6 @@ internal class Deck : IDeck {
 
         }
 
-        CardSet = shuffledDeck;
+        CardList = shuffledDeck;
     }
 }

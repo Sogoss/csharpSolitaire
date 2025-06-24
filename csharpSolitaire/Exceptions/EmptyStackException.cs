@@ -1,9 +1,10 @@
 ﻿namespace CsharpSolitaire.Exceptions;
+
 internal class EmptyStackException : Exception {
-    public EmptyStackException() : base() { }
+    internal EmptyStackException() : base() { }
 
-    public EmptyStackException(string? message) : base(message) { }
+    internal EmptyStackException(string? message) : base(message) { }
 
-    public EmptyStackException(string? message, Exception? innerException) : base(message, innerException) { }
+    internal EmptyStackException(string? message, Exception? innerException) : base(message, innerException) { }
 
 }

@@ -2,7 +2,7 @@
 using CsharpSolitaire.Exceptions;
 
 namespace CsharpSolitaire.Objects.SeedStackObject;
-internal class SeedStack(Suit suit) : ISeedStack {
+public class SeedStack(Suit suit) : ISeedStack {
     internal Stack<Card> stack = new();
     internal Suit suit = suit;
 
@@ -19,7 +19,7 @@ internal class SeedStack(Suit suit) : ISeedStack {
         Card? lastCard = stack.FirstOrDefault();
 
         if (lastCard == null &&
-            card.Rank == 1)
+            card.Rank == Rank.Ace)
             stack.Push(card);
         else if (lastCard != null &&
             card.Rank - lastCard.Rank == 1)

@@ -1,4 +1,4 @@
-﻿namespace CsharpSolitaire.Objects.CardSuitObject;
+﻿namespace CsharpSolitaire.Objects.CardObject;
 
 public enum Rank {
     Ace = 1,

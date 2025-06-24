@@ -3,8 +3,8 @@ using CsharpSolitaire.Exceptions;
 
 namespace CsharpSolitaire.Objects.CardStackObject;
 
-internal class CardStack() : ICardStack {
-    public Stack<Card> cardsStack = new();
+public class CardStack() : ICardStack {
+    internal Stack<Card> cardsStack = new();
 
     public void Print() {
         foreach (Card card in cardsStack)
